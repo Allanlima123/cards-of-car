@@ -1,0 +1,124 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+:root{
+    --corVerde:#00403F;
+    --corAzul:#016972;
+    --carLaranja:#E28525;
+    --corfundo: #a0a0a0;
+
+    --fonte-principal:'Big Shoulders Display',sans-serif;
+}
+
+body{
+    background-color: #f1f1f1;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.container-cards{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.container-cards .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.container-cards .box .card{
+    max-width: 340px;
+    padding: 46px;
+}
+
+.container-cards .box .card h1{
+    color: #fff;
+    margin-top: 18px;
+    font-size: 40px;
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+}
+
+.container-cards .box .card p{
+    color: #fff;
+    line-height: 1.8;
+    margin: 15px 0;
+    font-weight: 300;
+    font-size: 17.5px;
+}
+
+.container-cards .box .card .btn{
+    display: inline-block;
+    background-color: #fff;
+    width: 155px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 32px;
+    margin-top: 50px;
+}
+
+.container-cards .box .card .btn.corLaraja{
+    color: var(--carLaranja);
+}
+
+.container-cards .box .card .btn.corVerde{
+    color: var(--corVerde);
+}
+
+.container-cards .box .card .btn.corAzul{
+    color: var(--corAzul);
+}
+
+.container-cards .box .card .btn.corLaraja:hover,
+.container-cards .box .card .btn.corVerde:hover,
+.container-cards .box .card .btn.corAzul:hover{
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.container-cards .card:nth-child(1){
+    background-color: var(--carLaranja);
+}
+
+.container-cards .card:nth-child(2){
+    background-color: var(--corAzul);
+}
+
+.container-cards .card:nth-child(3){
+    background-color: var(--corVerde);
+}
+
+@media(max-width:768px){
+    .container-cards{
+        margin: 20px;
+    }
+}
+
+@media(max-width:425px){
+    .container-cards .box .card .btn{
+        margin-top: 10px;
+    }
+}
+
+
+
