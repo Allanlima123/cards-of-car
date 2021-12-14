@@ -33,6 +33,7 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+    margin: 25px 0;
 }
 
 .container-cards .box{
@@ -110,7 +111,7 @@ body{
 
 @media(max-width:768px){
     .container-cards{
-        margin: 20px;
+        margin: 30px 20px;
     }
 }
 
