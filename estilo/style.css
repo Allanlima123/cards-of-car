@@ -28,29 +28,21 @@ body{
 }
 
 .container-cards{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    margin: 25px 0;
-}
-
-.container-cards .box{
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     border-radius: 5px;
-    overflow: hidden;
+    margin: 25px 0;
 }
 
-.container-cards .box .card{
-    max-width: 340px;
+.container-cards .card{
+    width: 340px;
     padding: 46px;
 }
 
-.container-cards .box .card h1{
+.container-cards .card h1{
     color: #fff;
     margin-top: 18px;
     font-size: 40px;
@@ -58,7 +50,7 @@ body{
     font-weight: 500;
 }
 
-.container-cards .box .card p{
+.container-cards .card p{
     color: #fff;
     line-height: 1.8;
     margin: 15px 0;
@@ -66,7 +58,7 @@ body{
     font-size: 17.5px;
 }
 
-.container-cards .box .card .btn{
+.container-cards .card .btn{
     display: inline-block;
     background-color: #fff;
     width: 155px;
@@ -77,21 +69,21 @@ body{
     margin-top: 50px;
 }
 
-.container-cards .box .card .btn.corLaraja{
+.container-cards .card .btn.corLaraja{
     color: var(--carLaranja);
 }
 
-.container-cards .box .card .btn.corVerde{
+.container-cards .card .btn.corVerde{
     color: var(--corVerde);
 }
 
-.container-cards .box .card .btn.corAzul{
+.container-cards .card .btn.corAzul{
     color: var(--corAzul);
 }
 
-.container-cards .box .card .btn.corLaraja:hover,
-.container-cards .box .card .btn.corVerde:hover,
-.container-cards .box .card .btn.corAzul:hover{
+.container-cards .card .btn.corLaraja:hover,
+.container-cards .card .btn.corVerde:hover,
+.container-cards .card .btn.corAzul:hover{
     background-color: transparent;
     color: #fff;
     border: 2px solid #fff;
@@ -99,6 +91,7 @@ body{
 
 .container-cards .card:nth-child(1){
     background-color: var(--carLaranja);
+    border-radius: 5px 0 0 5px;
 }
 
 .container-cards .card:nth-child(2){
@@ -107,11 +100,26 @@ body{
 
 .container-cards .card:nth-child(3){
     background-color: var(--corVerde);
+    border-radius: 0 5px 5px 0;
 }
 
 @media(max-width:768px){
     .container-cards{
         margin: 30px 20px;
+    }
+
+    .container-cards .card{
+        border-radius: none;
+    }
+}
+
+@media(max-width:750px){
+    .container-cards .card:nth-child(1){
+        border-radius: 5px 5px 0 0;
+    }
+
+    .container-cards .card:nth-child(3){
+        border-radius: 0 0 5px 5px;
     }
 }
 
